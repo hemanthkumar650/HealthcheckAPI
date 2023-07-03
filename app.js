@@ -6,7 +6,7 @@ const port = 3000;
 
 app.get('/text-base64', (req, res) => {
   const { text } = req.query;
-  const base64 = base64url.encode(text);
+  const base64 = Buffer.from(text).toString('base64');
 
   res.json({ text, base64 });
 });
