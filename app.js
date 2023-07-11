@@ -9,6 +9,7 @@ app.get('/text-base64', (req, res) => {
   const base64 = Buffer.from(text).toString('base64');
 
   res.json({ text, base64 });
+});
 app.get('/', (req, res) => {
   res.send('Hello')
 })
